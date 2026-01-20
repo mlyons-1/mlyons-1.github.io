@@ -9,17 +9,41 @@
   </head>
 
   <body>
-    <h1 style="font-family:georgia; font-size:125%;">Hello World!</h1>
-    <p style="font-family:georgia; font-size:125%;">Below is an image from ジョジョの <!-- Pronounced "JoJo no" -->
+    <!-- Main Heading -->
+    <h1 style="font-family:georgia; font-size:200%;">Hello World!</h1>
+    <!-- Paragraph 1 (main body, right under <h1>) -->
+    <p style="font-family:georgia; font-size:150%;">
+      Below is an image from ジョジョの <!-- Pronounced "JoJo no" -->
       <ruby>奇妙<rt>きみょう</rt></ruby> <!-- Pronounced "Kimyou" (key-myo, like Thor's Hammer "Mjollnir") -->
       な <!-- Pronounced "na" (nah) -->
       <ruby>冒険<rt>ぼうけん</rt></ruby> <!-- Pronounced "Bouken" (boh-ken, like "bolt") -->
-      (<a href = "https://www.youtube.com/watch?v=cUzkaHsNzX8">JoJo's Bizarre Adventure</a>)
       <!-- "ruby" - Japanese kanji with furigana (pronunciation guides)
       Syntax: <ruby>kanji<rt>kana</rt></ruby>
       Learned from https://community.wanikani.com/t/how-can-i-add-furigana-to-kanji-in-posts/60053/3 -->
+      (<a href = "https://www.youtube.com/watch?v=cUzkaHsNzX8">JoJo's Bizarre Adventure</a>)
+      <!-- Video links to "JoJo's Bizarre Adventure: All-Star Battle R"
+      HHAs (Heart Heat Attacks) and GHAs (Great Heat Attacks) -->
     </p>
     
     <img src = "johnnyandgyro.jpeg" alt = "Johnny and Gyro!!!! They're so cool!!!" width = "500" height = "500">
+    <!-- Image of Johnny Joestar and Gyro Zeppeli from
+    "JoJo's Bizarre Adventure: Steel Ball Run" (Part 7) -->
+    
+    <!-- Paragraph 2 (quote under image) -->
+    <q style="font-family:georgia; font-size:150%;"> <!-- Quote from aforementioned "Steel Ball Run"
+      The <q> element adds quotation marks around the content inside of it -->
+      <i>
+        Wanna go back home? Now's your last chance.
+        <sup> <!-- Superscript text -->
+          <a href = "https://www.youtube.com/watch?v=6kH8890xJik">~1:18:33</a>
+          <!-- Video links to "JoJo's Bizarre Adventure: All-Star Battle R"
+          Taunts and Poses within the game (source of quote) -->
+        </sup>
+      </i>
+    </q>
+    <p style="font-family:georgia; font-size:150%;"> <!-- Name of character that quote originates from -->
+      &mdash; ジョニィ・ジョースター (Johnny Joestar) <br>
+      <!-- The "&mdash;" is a Unicode character for an em dash (long dash) -->
+    </p>
   </body>
 </html>
