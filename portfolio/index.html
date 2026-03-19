@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Lyons | Home</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Add "ml-favicon-0213" favicon (every page) -->
+        <link rel="icon" type="image/x-icon" href="images/ml-favicon-0213.jpg">
+
+        <!-- "Inria Serif" font from Google Fonts
+        https://fonts.google.com/specimen/Inria+Serif -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+
+        <!-- "Abril Fatface" font from Google Fonts
+        https://fonts.google.com/specimen/Abril+Fatface -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation bar for hamburger menu
+        Copy/paste on every HTML page -->
+        <nav>
+            <!-- Hyperlink logo to Home Page -->
+            <a href="#home" class="logo" target="_blank" title="Matthew Lyons | Home">
+                <img src="images/ml-logo-0213.jpg" alt="Matthew Lyons' Logo">
+            </a>
+
+            <h1> <!-- Page Name (changes between pages) -->
+                HOME
+            </h1>
+                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <!-- &#9776; - "Trigram For Heaven"
+                From https://www.compart.com/en/unicode/U+2630
+                Three stacked horizontal lines (intended for hamburger menu icon) -->
+            </label>
+            
+            <ul class="menu" style="font-size: 28px"> <!-- Hamburger Menu
+                "target='_blank'" opens each link in a new tab
+                "title='Matthew Lyons | Page Name'" is text that displays when the link is hovered over -->
+                <li><a href="index.html" target="_blank" title="Matthew Lyons | Home">HOME</a></li>
+                <li><a href="contact.html" target="_blank" title="Matthew Lyons | Contact">CONTACT</a></li>
+                <li><a href="about.html" target="_blank" title="Matthew Lyons | About">ABOUT</a></li>
+                <li><a href="resume.html" target="_blank" title="Matthew Lyons | Résumé">RÉSUMÉ</a></li>
+                <li><a href="courses.html" target="_blank" title="Matthew Lyons | Courses">COURSES</a></li>
+                <li><a href="projects.html" target="_blank" title="Matthew Lyons | Projects">PROJECTS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content exclusive to home page (index.html) -->
+        <main style="padding: 40px 0px 0px 0px;"> <!-- Padding for specifically this page -->
+            <!-- Professional picture (centered on page)
+            - "display: block" and "margin: 0 auto;" centers the image
+            - "box-shadow" adds a black drop shadow -->
+            <img src="images/home-portrait-0217.png" alt="Professional picture of Matthew Lyons" style="display: block; margin: 0 auto; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); max-width: 100%; height: auto;">
+
+            <p style="text-align: center; font-size: 28px;">
+                My name is <b>Matthew Lyons</b>,
+                and this is my portfolio's home page!
+            </p>
+            <p style="text-align: center; font-size: 20px; font-style: italic;"> <!-- Image note -->
+                Please excuse the image's quality; it is somewhat dated.
+            </p> <!-- "font-style: italic" from https://www.w3schools.com/cssref/pr_font_font-style.php -->
+        </main>
+
+        <!-- Footer (goes on every HTML page) with:
+        ~ Copyright symbol
+        ~ Current year (2026)
+        ~ Contact links (including GitHub) -->
+        <footer>
+            <p style="text-align: center">
+                <!-- Copyright symbol from https://www.w3schools.com/html/html_symbols.asp
+                Non-breaking space from https://www.w3schools.com/html/html_entities.asp
+                Star unicode symbol from https://www.toptal.com/designers/htmlarrows/symbols/white-star/ -->
+                &copy; 2026 Matthew Lyons <br>
+                <a href="mailto:mlyons1@highpoint.edu">Email Me</a> &nbsp; &star; &nbsp;
+                <a href="tel:+1-336-782-3092">Call Me</a> &nbsp; &star; &nbsp;
+                <a href="https://github.com/mlyons-1" target="_blank" title="Matthew Lyons | GitHub">GitHub</a> &nbsp; &star; &nbsp;
+                <a href="https://coolors.co/656b8c-434656-f4e9f6-011031-dab7a1" target="_blank" title="Matthew Lyons | CSS Color Palette">Color Palette</a>
+            </p>
+        </footer>
+    </body>
+</html>

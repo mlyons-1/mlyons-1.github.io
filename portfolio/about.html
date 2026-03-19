@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Lyons | About</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="images/ml-favicon-0213.jpg">
+
+        <!-- "Inria Serif" font from Google Fonts
+        https://fonts.google.com/specimen/Inria+Serif -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+
+        <!-- "Abril Fatface" font from Google Fonts
+        https://fonts.google.com/specimen/Abril+Fatface -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <nav> <!-- Navigation bar for hamburger menu -->
+            <!-- Hyperlink logo to Home Page -->
+            <a href="#home" class="logo" target="_blank" title="Matthew Lyons | Home">
+                <img src="images/ml-logo-0213.jpg" alt="Matthew Lyons' Logo">
+            </a>
+
+            <h1> <!-- Page Name -->
+                ABOUT
+            </h1>
+                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="menu" style="font-size: 28px"> <!-- Hamburger Menu
+                "target='_blank'" opens each link in a new tab
+                "title='Matthew Lyons | Page Name'" is text that displays when the link is hovered over -->
+                <li><a href="index.html" target="_blank" title="Matthew Lyons | Home">HOME</a></li>
+                <li><a href="contact.html" target="_blank" title="Matthew Lyons | Contact">CONTACT</a></li>
+                <li><a href="about.html" target="_blank" title="Matthew Lyons | About">ABOUT</a></li>
+                <li><a href="resume.html" target="_blank" title="Matthew Lyons | Résumé">RÉSUMÉ</a></li>
+                <li><a href="courses.html" target="_blank" title="Matthew Lyons | Courses">COURSES</a></li>
+                <li><a href="projects.html" target="_blank" title="Matthew Lyons | Projects">PROJECTS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content exclusive to current page (about.html) -->
+        <main>
+            <section class="image-text-block"> <!-- Image and text collectively -->
+                <figure class="image-side"> <!-- Image on left side of page -->
+                    <img src="images/about-portrait-0301.jpg" alt="Casual picture of Matthew Lyons" style="display: block; margin: 0 auto; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); max-width: 100%; height: auto;">
+                </figure>
+                
+                <!-- 2-3 paragraphs with:
+                  - My major and why I chose it
+                  - Why I chose High Point University
+                  - Hobbies (what I do in my spare time) -->
+                <div class="text-side"> <!-- Text on right side of page -->
+                    <p> <!-- Paragraph 1 -->
+                        My name is Matthew Lyons and I am a Computer Science major.
+                        I chose the major that I did because I've always been around
+                        technology. I've interacted with various electronic devices
+                        ever since I was young: televisions, game consoles, and
+                        computers of various shapes and sizes. These experiences
+                        accumulated into a desire to learn about the ins and outs
+                        of these complicated, yet fascinating items.
+                    </p>
+
+                    <p> <!-- Paragraph 2 -->
+                        I chose High Point University because it is a very
+                        acclaimed school. Its initial presentation was truly
+                        outstanding and it lives up to the extraordinary
+                        standard that it has set for itself. The personnel are
+                        also very welcoming and courteous, which is
+                        subjectively important for a school to prioritize.
+                        As of the second semester of my junior year,
+                        I believe that I made the right choice to come here.
+                        So far, I've had personal experience with Python,
+                        C++, HTML, and CSS.
+                    </p>
+
+                    <p> <!-- Paragraph 3 -->
+                        In my spare time, I mainly play video games. This
+                        primarily refers to games on the Nintendo Switch,
+                        seeing as I grew up with various consoles that
+                        the company has made. I also listen to music,
+                        having grown fond of house, instrumental jazz,
+                        and other relaxing, yet soulful genres.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer> <!-- Footer at bottom of page -->
+            <p style="text-align: center">
+                &copy; 2026 Matthew Lyons <br>
+                <a href="mailto:mlyons1@highpoint.edu">Email Me</a> &nbsp; &star; &nbsp;
+                <a href="tel:+1-336-782-3092">Call Me</a> &nbsp; &star; &nbsp;
+                <a href="https://github.com/mlyons-1" target="_blank" title="Matthew Lyons | GitHub">GitHub</a> &nbsp; &star; &nbsp;
+                <a href="https://coolors.co/656b8c-434656-f4e9f6-011031-dab7a1" target="_blank" title="Matthew Lyons | CSS Color Palette">Color Palette</a>
+            </p>
+        </footer>
+    </body>
+</html>

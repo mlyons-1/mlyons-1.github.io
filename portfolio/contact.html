@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Lyons | Contact</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="images/ml-favicon-0213.jpg">
+
+        <!-- "Inria Serif" font from Google Fonts
+        https://fonts.google.com/specimen/Inria+Serif -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+
+        <!-- "Abril Fatface" font from Google Fonts
+        https://fonts.google.com/specimen/Abril+Fatface -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <nav> <!-- Navigation bar for hamburger menu -->
+            <!-- Hyperlink logo to Home Page -->
+            <a href="#home" class="logo" target="_blank" title="Matthew Lyons | Home">
+                <img src="images/ml-logo-0213.jpg" alt="Matthew Lyons' Logo">
+            </a>
+
+            <h1> <!-- Page Name -->
+                CONTACT
+            </h1>
+                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="menu" style="font-size: 28px"> <!-- Hamburger Menu
+                "target='_blank'" opens each link in a new tab
+                "title='Matthew Lyons | Page Name'" is text that displays when the link is hovered over -->
+                <li><a href="index.html" target="_blank" title="Matthew Lyons | Home">HOME</a></li>
+                <li><a href="contact.html" target="_blank" title="Matthew Lyons | Contact">CONTACT</a></li>
+                <li><a href="about.html" target="_blank" title="Matthew Lyons | About">ABOUT</a></li>
+                <li><a href="resume.html" target="_blank" title="Matthew Lyons | Résumé">RÉSUMÉ</a></li>
+                <li><a href="courses.html" target="_blank" title="Matthew Lyons | Courses">COURSES</a></li>
+                <li><a href="projects.html" target="_blank" title="Matthew Lyons | Projects">PROJECTS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content exclusive to current page (contact.html) -->
+        <main>
+            <form class="form-scss" style="padding-top: 50px;"> <!-- Form template from https://getbootstrap.com/docs/5.3/forms/overview/ -->
+                <!-- First Name Input -->
+                <div class="mb-3" style="display: flex; justify-content: center;">
+                    <label for="exampleInputPassword1" class="form-label">Please enter your first name:&nbsp;</label>
+                    <input type="text" class="form-control" style="font-size: 16px; width: 200px;">
+                    <!-- "width: 200px;" makes textbox longer
+                    From https://www.w3schools.com/tags/att_input_type_text.asp -->
+                </div>
+
+                <!-- Last Name Input-->
+                <div class="mb-3" style="display: flex; justify-content: center; padding-top: 20px;">
+                    <label for="exampleInputPassword1" class="form-label">Please enter your last name:&nbsp;</label>
+                    <input type="text" class="form-control" style="font-size: 16px; width: 200px;">
+                </div>
+
+                <!-- Email Input -->
+                <div class="mb-3" style="display: flex; justify-content: center; padding-top: 20px;">
+                    <label for="exampleInputEmail1" class="form-label">What is your email address?&nbsp;</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="font-size: 16px; width: 300px;"> <!-- Wider than first and last name inputs -->
+                </div>
+                <!-- Email Input Help (format) -->
+                <div class="col-auto" style="display: flex; justify-content: center; font-size: 14px; padding-top: 5px; font-style: italic;">
+                    <span id="passwordHelpInline" class="form-text">
+                        Provide your full email address (e.g. email@example.com).
+                    </span>
+                </div>
+
+                <!-- Message Input -->
+                <div class="mb-3" style="display: flex; justify-content: center; padding-top: 20px;">
+                    <label for="exampleFormControlTextarea1" class="form-label">Additional information:&nbsp;</label>
+                    <textarea class="form-control" rows="7" style="font-size: 16px; width: 500px;"></textarea>
+                    <!-- "width: 500px;" makes textbox wide (default value: can be resized on, at least, desktop)
+                    "rows='7'" makes textbox taller (six enters/returns before default max height is reached) -->
+                </div>
+
+                <!-- Checkbox to confirm user information is correct (optional) -->
+                <div class="mb-3 form-check" style="display: flex; justify-content: center; padding-top: 20px;">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">
+                        &nbsp;The information that I have inputted is correct and valid.
+                    </label>
+                </div>
+
+                <!-- Submit Button ("Send") -->
+                <div style="display: flex; justify-content: center; align-items: center; padding-top: 20px;">
+                    <!-- "<div>" container is used to center button on page -->
+                    <button type="submit" class="download-btn" formtarget="_blank" style="font-size: 16px; justify-content: center; font-style: normal;">
+                        <!-- "formtarget="_blank" opens submission form in new tab
+                        From https://www.w3schools.com/tags/att_button_formtarget.asp 
+                        "font-style: normal;" is used to not italicize the text (override "download-btn")-->
+                        &star; Send &star;
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <footer> <!-- Footer at bottom of page -->
+            <p style="text-align: center">
+                &copy; 2026 Matthew Lyons <br>
+                <a href="mailto:mlyons1@highpoint.edu">Email Me</a> &nbsp; &star; &nbsp;
+                <a href="tel:+1-336-782-3092">Call Me</a> &nbsp; &star; &nbsp;
+                <a href="https://github.com/mlyons-1" target="_blank" title="Matthew Lyons | GitHub">GitHub</a> &nbsp; &star; &nbsp;
+                <a href="https://coolors.co/656b8c-434656-f4e9f6-011031-dab7a1" target="_blank" title="Matthew Lyons | CSS Color Palette">Color Palette</a>
+            </p>
+        </footer>
+    </body>
+</html>

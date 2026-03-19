@@ -1,0 +1,506 @@
+/* NAVIGATION BAR */
+nav {
+  /* Fix to top of page */
+  position: fixed;
+  top: 0;
+  left: 0px;      /* Original suggestion from Dr. Summers (2-27-26): 8px */
+  right: 0px;     /* Original suggestion from Dr. Summers (2-27-26): 8px */
+  /* width: 100%; */
+  height: 70px;
+  display: flex;
+  justify-content: space-between; /* Logo on left, hamburger menu on right
+  From https://www.w3schools.com/cssref/css3_pr_justify-content.php */
+  align-items: center;
+  padding: 0 20px; /* Top and bottom padding: 0px
+  Left and right padding: 20px
+  From https://www.w3schools.com/css/css_padding.asp
+  z-index: 1000;
+
+  /* Text and background styling */
+  background-color: #011031;  /* "ml-logo-0213" background color */
+  color: #DAB7A1;             /* "ml-logo-0213" design color */
+  font-family: "Inria Serif", serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Drop shadow for navigation bar container
+  Horizontal offset (right), vertical offset (down), blur radius (in pixels), color (including alpha for opacity)
+  From https://www.w3schools.com/cssref/css3_pr_box-shadow.php */
+}
+
+/* HAMBURGER (three-line version) */
+.hamburger {
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer; /* Changes cursor to pointer (like hovering over a link)
+  when the hamburger menu is hovered over to indicate it can be clicked
+  From https://www.w3schools.com/cssref/pr_class_cursor.php */
+  z-index: 1100;
+  /* "z-index" controls element stacking (higher value goes on top)
+  From https://www.w3schools.com/cssref/pr_pos_z-index.php */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #DAB7A1;
+  border-radius: 2px; /* Beveled (rounded) edges for each hamburger bar 
+  From https://www.w3schools.com/cssref/css3_pr_border-radius.php */
+  transition: 0.25s ease; /* Animation properties over time
+  "0.25s" - one quarter of a second
+  "ease" - animation starts slow, speeds up, then slows down again
+  From https://www.w3schools.com/css/css3_transitions.asp */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none; /* Hides the checkbox input used to toggle the menu
+  From https://www.w3schools.com/cssref/pr_class_display.php */
+}
+
+/* MENU PANEL */
+.menu {
+  position: fixed; /* Fix to side of page (relative to viewport)
+  From https://www.w3schools.com/cssref/pr_class_position.php */
+  top: 70px; /* Padding from top of page (navigation bar) to prevent overlap
+  From https://www.w3schools.com/cssref/pr_pos_top.php */
+  right: 0; /* Padding from right edge of page to prevent overlap with hamburger menu
+  From https://www.w3schools.com/cssref/pr_pos_right.php */
+  width: 250px;
+  height: calc(100vh - 70px);
+  /* "100vh" - 100% of viewport (visible part of screen) height
+  From https://www.w3schools.com/cssref/css_units.php */
+  background: #011031;
+  list-style: none; /* Remove bullet points (default style for <ul> and <ol>) from <nav> links
+  From https://www.w3schools.com/cssref/pr_list-style.php */
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between menu links (flex containers)
+  From https://www.w3schools.com/cssref/css3_pr_gap.php */
+
+  /* FULLY HIDDEN */
+  transform: translateX(100%); /* Move menu completely off-screen (to the right)
+  From https://www.w3schools.com/cssref/css3_pr_transform.php */
+  transition: transform 0.3s ease; /* Animation properties over time
+  "transform" - gradually changes the above "transform" property (menu sliding in and out)
+  "0.3s" - 0.3 seconds (animation time)
+  "ease" - animation starts slow, speeds up, then slows down again
+  From https://www.w3schools.com/cssref/css3_pr_transition.php */
+  z-index: 1050;
+}
+
+/* MENU LINKS */
+.menu a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #DAB7A1;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25); /* Add drop shadow to menu links
+  Horizontal offset (right), vertical offset (down), blur radius (in pixels), color (including alpha for opacity) 
+  From https://www.w3schools.com/cssref/css3_pr_text-shadow.php */
+}
+
+/* SLIDE IN */
+#menu-toggle:checked ~ .menu {
+  transform: translateX(0); /* Move menu back to original position when checkbox is checked (the menu is open)
+  From https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX */
+}
+
+/* HAMBURGER → X (ANIMATION) */
+#menu-toggle:checked + .hamburger span:nth-child(1) { /* Top bar */
+  transform: translateY(10.5px) rotate(45deg); /* Move down and rotate right */
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) { /* Middle bar */
+  opacity: 0; /* Make middle bar invisible when menu is open */
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) { /* Bottom bar */
+  transform: translateY(-10.5px) rotate(-45deg); /* Move up and rotate left */
+}
+
+/* LOGO */
+nav img {
+  height: 50px;
+  width: auto;
+}
+
+/* Following code from https://www.w3schools.com/html/html_links_colors.asp 
+Hyperlink styling
+Color list: https://www.w3schools.com/CSSREF/css_colors.php (colors not in palette) */
+a:link { /* Unvisited */
+  color: #DAB7A1;
+  text-decoration: none;
+}
+
+a:visited { /* Visited */
+  color: lightsteelblue; /* B0C4DE */
+  text-decoration: none;
+}
+
+a:hover { /* Hovered over with mouse (mouse-over) */
+  color: lightpink; /* #FFB6C1 */
+  text-decoration: underline;
+}
+
+a:active { /* Being clicked on (active) */
+  color: darksalmon; /* #E9967A */
+  text-decoration: underline;
+}
+
+
+/* About Page (about.html) division (image left, text right) */
+/* Two-column layout on wide screens */
+.image-text-block {
+  display: flex;
+  gap: 2rem; /* Space between image and text */
+  /* "rem" is a distance unit relative to the root element (the <html> element)
+  For example, "2rem" is 2 times the font size of the <html> element
+  From https://www.w3schools.com/cssref/css_units.php */
+  max-width: 1200px;
+  margin: 0 auto; /* Center block horizontally */
+  padding: 2rem 1rem;
+}
+
+/* Left side (image) */
+.image-side img {
+  width: 70%;
+  height: auto;
+  display: block; /* Display image as block element (like <p>) instead of inline (default for <img>)
+  "inline" elements don't respond to height and width properties
+  "block" elements start on a new line and take up all available width
+  From https://www.w3schools.com/cssref/pr_class_display.php */
+}
+
+/* Right side (text) */
+.text-side {
+  display: flex; /* Displays element like flex container,
+  which is more flexible than the element's default style
+  From https://www.w3schools.com/cssref/pr_class_display.php */
+  flex-direction: column; /* Display text vertically (like a column)
+  From https://www.w3schools.com/cssref/css3_pr_flex-direction.php */
+  justify-content: center;  /* Center text within container
+  In context, vertically centers text next to image
+  From https://www.w3schools.com/cssref/css3_pr_justify-content.php */
+  max-width: 600px;
+}
+
+/* Mobile-first design: stack image and text on vertical screens 
+From https://www.w3schools.com/cssref/atrule_media.php */
+@media (max-width: 800px) {
+  .image-text-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-side {
+    max-width: none;
+  }
+}
+
+
+/* Résumé Page (resume.html) download */
+.resume-section {
+    max-width: 900px;
+    margin: 0 auto; /* Top and bottom (0), right and left (auto)
+    Top and bottom margin: 0px
+    Left and right margin: auto (horizontally centered)
+    From https://www.w3schools.com/css/css_margin.asp */
+    padding: 2rem; /* Padding in all four directions:
+    2 times the font size of the root element (the <html> element) */
+    font-family: "Inria Serif", serif;
+}
+
+/* Résumé preview */
+.resume-viewer {
+    width: 100%;
+    height: 50vh; /* Height adjusts for different devices (viewport height) */
+    border: 2px solid #DAB7A1; /* Border around embedded résumé
+    "2px" is the border width in pixels
+    "solid" is the border style (solid line)
+    The hex code "#DAB7A1" is the border color
+    From https://www.w3schools.com/css/css_border_shorthand.asp */
+    border-radius: 8px; /* Beveled edges for embedded résumé
+    From https://www.w3schools.com/cssref/css3_pr_border-radius.php */
+    overflow: hidden; /* Hides content that is too big for the container
+    From https://www.w3schools.com/css/css_overflow.asp */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    margin-bottom: 1.5rem; /* 1.5 times the font size of the root element */
+}
+
+.resume-viewer iframe {
+  /* Embed a document within the page
+  From https://www.w3schools.com/html/html_iframe.asp */
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Display download button (downloads as .pdf) */
+.download-btn {
+    display: inline-block; /* Display element as inline block with height and width adaptability
+    From https://www.w3schools.com/cssref/pr_class_display.php */
+    padding: 0.75rem 1.5rem; /* Vertical padding, horizontal padding
+    Top and bottom padding: 0.75 times the root element's (the <html> element) font size
+    Left and right padding: 1.5 times the root element's (the <html> element) font size
+    From https://www.w3schools.com/css/css_padding.asp */
+    background-color: #011031;
+    color: #DAB7A1;
+    font-style: italic;
+    border: 2px solid #DAB7A1;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.2s ease; /* Used in conjunction with ".download-btn:hover" below */
+}
+
+/* Invert color scheme when button is hovered over */
+.download-btn:hover {
+    background-color: #DAB7A1;
+    color: #011031;
+}
+
+
+/* Projects Page (projects.html) */
+.projects-section { /* Section containing all documents and paragraphs */
+  padding: 2rem; /* Padding in all four directions:
+  2 times the font size of the root element (the <html> element) */
+  font-family: "Inria Serif", serif;
+}
+
+.document-block { /* Container for each document and its paragraph */
+  max-width: 1000px;
+  margin: 50px auto 25px;
+  /* Each document block (document and paragraph collectively) has:
+  - 50 pixels of space above it
+  - "auto" left and right margins to center it horizontally
+  - 25 pixels of space below it
+  From https://www.w3schools.com/css/css_margin.asp */
+}
+
+.project-viewer { /* Preview for embedded presentations and documents */
+  width: 100%;
+  height: 50vh; /* Height adjusts for different devices (viewport height) */
+  border: 2px solid #DAB7A1; /* Border around embeds */
+  border-radius: 8px; /* Beveled edges for embeds */
+  overflow: hidden; /* Hides content that is too big for the container */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-bottom: 1.5rem; /* 1.5 times the font size of the root element */
+}
+
+.project-viewer iframe { /* Embed a presentation or document within the page */
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.doc-and-text { /* Controls positioning (document on left, paragraph on right) */
+    display: flex;
+    gap: 2rem; /* Space between viewer and text
+    2 times the font size of the root element (the <html> element) */
+    align-items: center; /* Vertically aligns document and text
+    From https://www.w3schools.com/cssref/css3_pr_align-items.php */
+    margin-bottom: 1.5rem; /* 1.5 times the font size of the root element (the <html> element) */
+}
+
+.doc-description { /* Document paragraph (<p>) styling */
+    max-width: 400px;
+    line-height: 1.5;
+    color: #F4E9F6;
+    font-family: "Inria Serif", serif;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+    /* Put space between each document */
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+@media (max-width: 800px) { /* Stack document and text on vertical screens */
+  .doc-and-text {
+      flex-direction: column;
+  }
+
+  .doc-description {
+    max-width: 100%;
+  }
+
+  .resume-viewer { /* Resize <iframe> for mobile viewing */
+      height: 50vh;
+  }
+}
+
+
+/* ~~ ~~ ~~ Fonts from Google Fonts ~~ ~~ ~~ */
+/* Inria Serif
+https://fonts.google.com/specimen/Inria+Serif */
+.inria-serif-light {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-serif-regular {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-bold {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-serif-light-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-serif-regular-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-serif-bold-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Abril Fatface
+https://fonts.google.com/specimen/Abril+Fatface */
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ~~ ~~ Main, footer, etc. styles ~~ ~~ */
+main {
+  margin: 70px 0 0 0; /* Suggestion from Dr. Summers (2-27-26) */
+}
+
+main p { /* All <p> elements in <main> */
+  background-color: #434656;
+  color: #F4E9F6;
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  /* Black drop shadow for text
+    ~ horizontal offset, vertical offset, blur radius (in pixels)
+    ~ rgba(red, green, blue, alpha (opacity) */
+  /* max-width: 100%;
+  height: auto; */
+}
+
+body { /* Make the page's background the same as the main content's background */
+  background-color: #434656;
+  padding: 0px 0px 50px; /* Prevent body from overlapping with nav/footer
+  Top padding, left/right padding, bottom padding
+  From https://www.w3schools.com/css/css_padding.asp */
+  margin-top: -10px; /* Adjust for navigation bar padding */
+}
+
+/* Table Styling help from https://www.w3schools.com/css/css_table.asp */
+table { /* Table styling for courses.html */
+  border-collapse: collapse;
+  border: 3px solid #DAB7A1;
+}
+
+th { /* Table Headers for courses.html */
+  background-color: #011031;
+}
+
+tr { /* Table Rows for courses.html */
+  color: #F4E9F6;
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  /* Black drop shadow for text
+    ~ horizontal offset, vertical offset, blur radius (in pixels)
+    ~ rgba(red, green, blue, alpha (opacity) */
+  /* max-width: 100%;
+  height: auto; */
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  /* Add space between table rows */
+}
+
+th, td { /* Table cells in courses.html */
+  border: 2px solid #DAB7A1;
+  /* From https://www.w3schools.com/css/css_border_shorthand.asp */
+  padding: 10px;
+  /* Add padding inside table cells */
+}
+
+/* Description List (commented out because I deemed it unnecessary */
+/* dt { Description Term (courses.html) space between terms
+  margin-top: 20px;
+}
+
+dt, dd { Description Term and Definition (courses.html)
+  color: #F4E9F6;
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+  text-align: left;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+   Black drop shadow for text
+    ~ horizontal offset, vertical offset, blur radius (in pixels)
+    ~ rgba(red, green, blue, alpha (opacity)
+  max-width: 100%;
+  height: auto;
+} */
+
+/* Form (contact.html) styling */
+.form-scss {
+  background-color: #434656;
+  color: #F4E9F6;
+  font-family: "Inria Serif", serif;
+  font-size: 22px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+h1 { /* Page Name in <nav> bar */
+  color: #DAB7A1;
+  font-family: "Abril Fatface", serif;
+  font-size: 200%;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1.0);
+}
+
+h2, h3 { /* Headers are in "Abril Fatface" so they stand out */
+  background-color: #434656;
+  color: #F4E9F6;
+  font-family: "Abril Fatface", serif;
+  font-size: 125%;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+footer {
+  /* Fix to bottom of page */
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  /* width: 100%; */
+  height: 70px;
+  display: flex;
+  justify-content: center; /* In place of "text-align: center;" */
+  align-items: center;
+  padding: 0 20px;
+
+  /* Text and background styling */
+  background-color: #011031;
+  color: #DAB7A1;
+  /* Same background and text color as header for consistency */
+  font-family: "Inria Serif", serif;
+  font-size: 18px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.75);
+}

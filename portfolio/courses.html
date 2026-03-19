@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Lyons | Courses</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/x-icon" href="images/ml-favicon-0213.jpg">
+
+        <!-- "Inria Serif" font from Google Fonts
+        https://fonts.google.com/specimen/Inria+Serif -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+
+        <!-- "Abril Fatface" font from Google Fonts
+        https://fonts.google.com/specimen/Abril+Fatface -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        </style>
+    </head>
+
+    <body>
+        <nav> <!-- Navigation bar for hamburger menu -->
+            <!-- Hyperlink logo to Home Page -->
+            <a href="#home" class="logo" target="_blank" title="Matthew Lyons | Home">
+                <img src="images/ml-logo-0213.jpg" alt="Matthew Lyons' Logo">
+            </a>
+
+            <h1> <!-- Page Name -->
+                COURSES
+            </h1>
+                
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <ul class="menu" style="font-size: 28px"> <!-- Hamburger Menu
+                "target='_blank'" opens each link in a new tab
+                "title='Matthew Lyons | Page Name'" is text that displays when the link is hovered over -->
+                <li><a href="index.html" target="_blank" title="Matthew Lyons | Home">HOME</a></li>
+                <li><a href="contact.html" target="_blank" title="Matthew Lyons | Contact">CONTACT</a></li>
+                <li><a href="about.html" target="_blank" title="Matthew Lyons | About">ABOUT</a></li>
+                <li><a href="resume.html" target="_blank" title="Matthew Lyons | Résumé">RÉSUMÉ</a></li>
+                <li><a href="courses.html" target="_blank" title="Matthew Lyons | Courses">COURSES</a></li>
+                <li><a href="projects.html" target="_blank" title="Matthew Lyons | Projects">PROJECTS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content exclusive to current page (courses.html) -->
+        <main style="width: 90%; margin: auto;">
+            <!-- "width: 90%;" is used to ensure the content isn't too wide
+            This is mainly for the table, which would stretch the entire page otherwise -->
+            <!-- Page Introduction: Major, Description, and brief reasoning -->
+            <p style="text-align: center; padding-top: 90px; margin-left: auto; margin-right: auto; line-height: 1.25;">
+                <!-- "margin-left: auto; margin-right: auto;" centers the block on the page -->
+                <!-- "line-height: 1.5;" adjusts the spacing between lines
+                From https://www.w3schools.com/cssref/pr_dim_line-height.php -->
+                <span style="font-size: 125%; display: inline-block; line-height: 1.75;">
+                    I am a <b>Computer Science</b> major at High Point University.
+                </span> <br>
+
+                This requires a minimum of 128 credit hours, a 2.00 cumulative GPA,
+                the completion of General Education Requirements, a 2.00 Major GPA
+                in Major coursework, and at least one third of the Major hours
+                completed at High Point University. <br>
+                <!-- 128 Hours minimum; 2.00 Cumulative GPA;
+                General Education Requirements met;
+                2.00 Major GPA in Major Coursework;
+                and 1/3 hours in Major at High Point. -->
+                <span style="display: inline-block; line-height: 2;">
+                    I chose Computer Science as my major because I've always been
+                    around technology, which led to a desire to learn more about
+                    the machinery that's surrounded me.
+                </span>
+            </p>
+
+            <!-- Table of Courses
+            From https://www.w3schools.com/html/html_tables.asp -->
+            <table style="margin-left: auto; margin-right: auto; margin-bottom: 50px;">
+                <colgroup> <!-- Column Group for setting column widths -->
+                    <!-- From https://www.w3schools.com/tags/tag_colgroup.asp -->
+                    <col style="width: 150px;"> <!-- "Course Code" column -->
+                    <col style="width: 160px;"> <!-- "Course Title" column -->
+                    <col> <!-- "Course Description" column (takes remaining space) -->
+                </colgroup>
+
+                <tr> <!-- Table Row with Table Headers -->
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Course Description</th>
+                </tr>
+
+                <tr> <!-- Table Row with Table Data -->
+                    <td style="text-align: center;">CSC-1710-03</td>
+                    <td style="text-align: center;">Intro. to Computer Programming</td>
+                    <td style="font-style: italic;">
+                        "An introduction to the fundamentals of programming
+                        using a high-level, structured programming language
+                        such as C. Emphasis will be placed on syntax and
+                        semantics of the language to write correct, efficient,
+                        and easily modifiable programs. Topics include, but are
+                        not limited to, assignment statements, conditional and
+                        iterative control structures, functions,
+                        simple data structures, and software development."
+                    </td>
+                </tr>
+
+                <tr style="background-color: #494D65;">
+                    <!-- Background color is a slight variation of #656B8C -->
+                    <td style="text-align: center;">CSC-1720-04</td>
+                    <td style="text-align: center;">Adv Prog With Data Structures</td>
+                    <td style="font-style: italic;">
+                        "This is a continuation of CSC 1710 covering more
+                        advanced fundamentals of programming including
+                        problem-solving strategies, the concept of an algorithm
+                        and basic data structures in an object-oriented language
+                        such as C++. Various programming concepts will be introduced
+                        such as recursion, string processing, classes, sorting,
+                        searching, linked lists, stacks, queues, and trees."
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">CSC-2342-01</td>
+                    <td style="text-align: center;">Discrete Structures</td>
+                    <td style="font-style: italic;">
+                        "This is an introductory course in discrete mathematical
+                        structures widely used &lbrack;in&rbrack; computer science.
+                        The purpose of this course is to understand and use
+                        (abstract) discrete structures that are backbones of
+                        computer science. This course teaches the students techniques
+                        in how to think logically and mathematically and apply these
+                        techniques in solving problems. In particular, this class is
+                        meant to introduce logic, proofs, sets, relations,
+                        functions, counting, and probability, with an emphasis on
+                        applications in computer science."
+                    </td>
+                </tr>
+
+                <tr style="background-color: #494D65;">
+                    <td style="text-align: center;">CSC-2710-01</td>
+                    <td style="text-align: center;">Adv Data Structures/Algo Dev</td>
+                    <td style="font-style: italic;">
+                        "This is a continuation of CSC-1720 where the focus is on
+                        algorithm development utilizing advanced data structures
+                        such as graphs and trees. Various programming strategies
+                        will be addressed such as greedy, divide and conquer,
+                        backtracking, branch and bound and dynamic programming.
+                        Other topics include recursion, algorithm analysis,
+                        object oriented programming and event driven programs."
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">PHY-2200-01</td>
+                    <td style="text-align: center;">Computational Physics</td>
+                    <td style="font-style: italic;">
+                        "A project-based introduction to computational physics
+                        through computational modeling. Students will learn to
+                        construct, solve, validate, and communicate mathematical
+                        models of physical systems. Topics include numerical
+                        techniques for solving ordinary and partial differential
+                        equations, data analysis, error analysis, and parallel
+                        computing. Applications of modeling across a variety of
+                        areas, including statistical mechanics, fluid dynamics,
+                        and non-linear dynamics, will be explored."
+                    </td>
+                </tr>
+
+                <tr style="background-color: #494D65;">
+                    <td style="text-align: center;">CSC-2212-01</td>
+                    <td style="text-align: center;">Database Systems</td>
+                    <td style="font-style: italic;">
+                        "This course covers database design and the use of databases
+                        in web, mobile and cloud applications. It includes extensive
+                        coverage of the relational model, relational algebra, and SQL
+                        as well as NoSQL designs. The course also features database
+                        design and relational design principles based on dependencies
+                        and normal forms. There will be a programming project, which
+                        explores database design and management by utilizing
+                        appropriate features of SQL."
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">CSC-2410-01</td>
+                    <td style="text-align: center;">Computer Systems</td>
+                    <td style="font-style: italic;">
+                        "An introduction to instruction set architecture,
+                        microarchitecture, and system architecture. Topics include
+                        basic computer organization, central processor and memory,
+                        addressing techniques, data representation, fundamental
+                        programming techniques in assembly and machine language
+                        as it relates to operating systems and high level languages.
+                        The course also includes exposure to networking and
+                        communication as well as parallel and distributed computing."
+                    </td>
+                </tr>
+
+                <tr style="background-color: #494D65;">
+                    <td style="text-align: center;">CSC-3212-01</td>
+                    <td style="text-align: center;">Web Technologies</td>
+                    <td style="font-style: italic;">
+                        "A study of advanced web technologies with an emphasis on
+                        full stack development including usage of a database to
+                        facilitate the retention and delivery of information.
+                        Various scripting languages such as PHP and JavaScript
+                        will be used during the course. Each student will participate
+                        in a series of projects that will focus on creation of a
+                        dynamic interactive web site."
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Description List of Courses (commented out because I deemed it unnecessary)
+            <dl style="padding-bottom: 30px; margin-left: auto; margin-right: auto;">    Description List
+                <dt>CSC-1710-03, Intro. to Computer Programming</dt>    Description Term
+                <dd>     Description Definition
+                    Description: <span style="font-style: italic;">
+                        "An introduction to the fundamentals of programming
+                        using a high-level, structured programming language
+                        such as C. Emphasis will be placed on syntax and
+                        semantics of the language to write correct, efficient,
+                        and easily modifiable programs. Topics include, but are
+                        not limited to, assignment statements, conditional and
+                        iterative control structures, functions,
+                        simple data structures, and software development."
+                    </span>
+                </dd>
+
+                <dt>CSC-1720-04, Adv Prog With Data Structures</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "This is a continuation of CSC 1710 covering more
+                        advanced fundamentals of programming including
+                        problem-solving strategies, the concept of an algorithm
+                        and basic data structures in an object-oriented language
+                        such as C++. Various programming concepts will be introduced
+                        such as recursion, string processing, classes, sorting,
+                        searching, linked lists, stacks, queues, and trees."
+                    </span>
+                </dd>
+
+                <dt>CSC-2342-01, Discrete Structures</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "This is an introductory course in discrete mathematical
+                        structures widely used &lbrack;in&rbrack; computer science.
+                        The purpose of this course is to understand and use
+                        (abstract) discrete structures that are backbones of
+                        computer science. This course teaches the students techniques
+                        in how to think logically and mathematically and apply these
+                        techniques in solving problems. In particular, this class is
+                        meant to introduce logic, proofs, sets, relations,
+                        functions, counting, and probability, with an emphasis on
+                        applications in computer science."
+                    </span>
+                    Left Bracket from https://www.toptal.com/designers/htmlarrows/punctuation/left-bracket/
+                    I assumed what Right Bracket ("]") would be based on what Left Bracket ("[") is
+                </dd>
+
+                <dt>CSC-2710-01, Adv Data Structures/Algo Dev</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "This is a continuation of CSC-1720 where the focus is on
+                        algorithm development utilizing advanced data structures
+                        such as graphs and trees. Various programming strategies
+                        will be addressed such as greedy, divide and conquer,
+                        backtracking, branch and bound and dynamic programming.
+                        Other topics include recursion, algorithm analysis,
+                        object oriented programming and event driven programs."
+                    </span>
+                </dd>
+
+                <dt>PHY-2200-01, Computational Physics</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "A project-based introduction to computational physics
+                        through computational modeling. Students will learn to
+                        construct, solve, validate, and communicate mathematical
+                        models of physical systems. Topics include numerical
+                        techniques for solving ordinary and partial differential
+                        equations, data analysis, error analysis, and parallel
+                        computing. Applications of modeling across a variety of
+                        areas, including statistical mechanics, fluid dynamics,
+                        and non-linear dynamics, will be explored."
+                    </span>
+                </dd>
+
+                <dt>CSC-2212-01, Database Systems</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "This course covers database design and the use of databases
+                        in web, mobile and cloud applications. It includes extensive
+                        coverage of the relational model, relational algebra, and SQL
+                        as well as NoSQL designs. The course also features database
+                        design and relational design principles based on dependencies
+                        and normal forms. There will be a programming project, which
+                        explores database design and management by utilizing
+                        appropriate features of SQL."
+                    </span>
+                </dd>
+
+                <dt>CSC-2410-01, Computer Systems</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "An introduction to instruction set architecture,
+                        microarchitecture, and system architecture. Topics include
+                        basic computer organization, central processor and memory,
+                        addressing techniques, data representation, fundamental
+                        programming techniques in assembly and machine language
+                        as it relates to operating systems and high level languages.
+                        The course also includes exposure to networking and
+                        communication as well as parallel and distributed computing."
+                    </span>
+                </dd>
+
+                <dt>CSC-3212-01, Web Technologies</dt>
+                <dd>
+                    Description: <span style="font-style: italic;">
+                        "A study of advanced web technologies with an emphasis on
+                        full stack development including usage of a database to
+                        facilitate the retention and delivery of information.
+                        Various scripting languages such as PHP and JavaScript
+                        will be used during the course. Each student will participate
+                        in a series of projects that will focus on creation of a
+                        dynamic interactive web site."
+                    </span>
+                </dd>
+            </dl> -->
+        </main>
+
+        <footer> <!-- Footer at bottom of page -->
+            <p style="text-align: center">
+                &copy; 2026 Matthew Lyons <br>
+                <a href="mailto:mlyons1@highpoint.edu">Email Me</a> &nbsp; &star; &nbsp;
+                <a href="tel:+1-336-782-3092">Call Me</a> &nbsp; &star; &nbsp;
+                <a href="https://github.com/mlyons-1" target="_blank" title="Matthew Lyons | GitHub">GitHub</a> &nbsp; &star; &nbsp;
+                <a href="https://coolors.co/656b8c-434656-f4e9f6-011031-dab7a1" target="_blank" title="Matthew Lyons | CSS Color Palette">Color Palette</a>
+            </p>
+        </footer>
+    </body>
+</html>
